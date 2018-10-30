@@ -7,15 +7,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="styles/reset.css" type="text/css">
+    <link rel="stylesheet" href="styles/themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="styles/themes/light/light.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="styles/themes/dark/dark.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="styles/themes/bar/bar.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="styles/themes/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="styles/themes/style.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <script src="scripts/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('product').click(function (e) { 
+                e.preventDefault();
+                $('.subMenu').slideToggle();
+            });
+        });
+    </script>
 </head>
 
 <body>
     <div class="nav">
-        <div class="share center">
-            <a class="fb" href="#"><img src="images/icon-facebook.png" alt="">粉絲團</a>
-            <a class="twitter" href="#"><img src="images/icon-twitter.png" alt="">追蹤我們</a>
+        <div class="center">
+        <div class="share">
+            <a class="fb" href="#"><img src="images/icon-facebook.png" alt=""><span>粉絲團</span></a>
+            <a class="twitter" href="#"><img src="images/icon-twitter.png" alt=""><span>追蹤我們</span></a>
         </div>
+    </div>
     </div>
     <div class="header">
         <div class="center">
@@ -23,18 +40,147 @@
             <div class="menu">
                 <ul>
                     <li><a href="#">首頁</a></li>
-                    <li><a href="#">產品介紹</a></li>
+                    <li>
+                        <a href="#" class="product">產品介紹</a>
+                        <ul class="subMenu">
+                            <li><a href="#">Html5 基礎教學</a></li>
+                            <li><a href="#">響應式網站設計</a></li>
+                            <li><a href="#">JQuery 實戰教學</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">聯絡我們</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="ad">
-        <div id="jq-lider">
-            <div class="adTitle">六角學院<br>讓您奠定良好的前端基礎</div>
-            <a href=""><img src="" alt=""></a>
+        <div class="adBox theme-default" id="jq-nivoslider">
+            <a href="#">
+                <h1 class="adTitle">六角學院<br>讓您奠定良好的前端基礎</h1>
+                <div id="slider" class="nivoSlider">
+                        <img src="images/Banner.png" data-thumb="images/nemo.jpg" alt="" />
+                    <img src="images/nemo.jpg" data-thumb="images/nemo.jpg" alt="" />
+                    <img src="images/up.jpg" data-thumb="images/up.jpg" alt="" />
+                    <img src="images/walle.jpg" data-thumb="images/walle.jpg" alt="" data-transition="slideInLeft" />
+                </div>
+            </a>
         </div>
     </div>
+    <div class="content center">
+        <div class="class">
+            <div class="classBox">
+                <div class="icon html5"><img src="images/img_html5.png" alt="">
+                </div>
+                <h3>Html 5基礎教學</h3>
+                <p>主流前端網站設計的基礎就在六角學院，在這裡不在是填鴨式教學，而是透過實際的範例，瞭解正確的網站開發流程，講師均具有業界開發經驗，讓學員學習業界主流的開發方法。</p>
+            </div>
+            <div class="classBox">
+                <div class="icon rwd"><img src="images/img_responsive.png" alt="">
+                </div>
+                <h3>響應式網站設計</h3>
+                <p>響應式網站設計 (Responsive web design)，目前大多使用者均是以手機瀏覽的情況下，響應式網站已經是必備的。六角學院將會提供業界響應式開發方法，讓學生瞭解行動版開發技巧。</p>
+            </div>
+            <div class="classBox">
+                <div class="icon jq"><img src="images/img_jquery.png" alt="">
+                </div>
+                <h3>jQuery 實戰教學</h3>
+                <p>本課程有以下特色<br>
+                    ．瞭解變數的使用方法<br>
+                    ．學習並操作DOM<br>
+                    ．學習基本數學運算方法<br>
+                    ．套件的操作及運用</p>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="tableBox">
+            <h2>線上及實體課程的差異</h2>
+            <table>
+                <tr>
+                    <th>項目</th>
+                    <th>Hex School 線上課程</th>
+                    <th>一般線上課程</th>
+                    <th>實體課程</th>
+                </tr>
+                <tr>
+                    <td>費用</td>
+                    <td>較低</td>
+                    <td>較低</td>
+                    <td>較高</td>
+                </tr>
+                <tr>
+                    <td>學習效果</td>
+                    <td>一般</td>
+                    <td>較低</td>
+                    <td>很好</td>
+                </tr>
+                <tr>
+                    <td>Code review</td>
+                    <td>有</td>
+                    <td>無</td>
+                    <td>不一定</td>
+                </tr>
+                <tr>
+                    <td>課程更新速度</td>
+                    <td>普通</td>
+                    <td>普通</td>
+                    <td>較慢</td>
+                </tr>
+                <tr>
+                    <td>多次複習</td>
+                    <td>可</td>
+                    <td>較慢</td>
+                    <td>不可</td>
+                </tr>
+                <tr>
+                    <td>字幕</td>
+                    <td>有</td>
+                    <td>不可</td>
+                    <td>板書</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <div class="form center">
+        <h2>對我們課程有興趣嗎？<br>
+            歡迎留下您的資料</h2>
+        <div class="inputBox">
+            <form action="">
+                <textarea name="" id="" cols="30" rows="10" class="tAreaBox"></textarea>
+                <div class="data">
+                    <label for="name">姓名</label>
+                    <input id="name" type="text" placeholder="請輸入姓名" name="name">
+                    <label for="phone">電話</label>
+                    <input id="phone" type="text" placeholder="請輸入電話" name="phone">
+                    <label for="name">信箱</label>
+                    <input id="mail" type="text" placeholder="請輸入Email" name="mail">
+                    <input type="button" value="送出" class="btn">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="center">
+            <a class="footerLogo"><img src="images/footer-logo.png" alt=""></a>
+            <div class="contact">
+                聯絡我們：<a href="hexschool@gmail.com" target="_blank">hexschool@gmail.com</a><br>
+                電話：<a href="#" target="_blank"></a>0999123456</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#slider').nivoSlider();
+        });
+        $(document).ready(function () {
+            $('.product').click(function (e) { 
+                e.preventDefault();
+                $('.subMenu').slideToggle();
+            });
+        });
+    </script>
 </body>
 
 </html>

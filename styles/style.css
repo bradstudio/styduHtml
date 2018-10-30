@@ -1,50 +1,257 @@
 body {
     font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+    background-color: #f6f6f6;
+    font-size: 15px;
+}
+a {
+    text-decoration: none;
 }
 .nav {
     max-width: 100%;
-    height: 30px;
+    height: 28px;
     background-color: #f6f6f6;
 }
 .center {
     max-width: 1000px;
     margin: 0 auto;
-    position: relative;
+}
+.share {
+    float: right;
+    margin-right: 20px;
 }
 .share a {
-    position: absolute;
     display: inline-block;
-    text-decoration: none;
     font-size: 15px;
-    margin-top: 5px;
+    line-height: 15px;
+}
+.share a img,.share a span {
+    vertical-align: middle;
+}
+.share a img {
+    margin-right: 3px;
 }
 .share a.fb {
     color: #4460a0;
     right: 120px;
+    border-right: 1px solid #ccc;
+    padding-right: 10px;
 }
 .share a.twitter {
     color: #00aaec;
-    right: 2%;
+    right: 20px;
 }
 
 .header {
     max-width: 100%;
+    background-color: white;
+    height: 49px;
+    z-index: 5;
+}
+.header .logo {
+    display: block;
+    margin: 7px 0 0 20px;
+    width: 170px;
+    float: left;
 }
 .menu {
     float: right;
 }
-.menu ul {
+.menu>ul {
     list-style: none;
 }
-.menu li {
+.menu>ul>li {
     float: left;
+    margin: 0 20px;
 }
-.menu li a {
+.menu>ul>li>a {
     display: block;
-    margin: 10px 5px;
+    padding: 11px 0px;
     color: #00cc99;
-    text-decoration: none;
+    border-bottom: 4px solid #ffffff;
 }
-.menu li a:hover {
-    border-bottom: 3px solid #00cc99;
+.menu>ul>li>a:hover {
+    border-bottom: 4px solid #00cc99;
+}
+.subMenu {
+    list-style: none;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+.subMenu li a {
+    display: block;
+    width: 120px;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #00cc99
+}
+.subMenu li a:hover {
+    background-color: #00cc99;
+    color: #ffffff;
+}
+.ad {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.adBox {
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.adBox img {
+    width: 100%;
+}
+.adBox .adTitle {
+    position: absolute;
+    float: left;
+    width: 100%;
+    top:45%;
+    transform:translateY(-49%);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    font-size: 36px;
+    z-index: 10;
+}
+.content {
+    padding: 60px 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+.class {
+    margin: 0 5px;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+.classBox {
+    float: left;
+    width: 300px;
+    max-width: 300px;
+    height: 330px;
+    margin: 0 15px;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0px 1px 5px #999999;
+}
+.classBox .icon {
+    text-align: center;
+    height: 145px;
+    margin-top: 28px;
+}
+.classBox .html5 img {
+    max-width: 121px;
+}
+.classBox .rwd img {
+    max-width: 221px;
+}
+.classBox .jq img {
+    max-width: 114px;
+}
+.classBox h3 {
+    text-align: center;
+    font-size: 18px;
+}
+.classBox p {
+    line-height: 22px;
+    max-width: 260px;
+    margin: 5px auto 0 auto;
+}
+.clear {
+    clear: both;
+}
+.tableBox {
+    max-width: 840px;
+    margin: 0 auto;
+}
+.tableBox h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.tableBox table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tableBox th {
+    background-color: #f7f7f7;
+    text-align: left;
+    padding: 5px 20px;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+.tableBox td {
+    padding: 6px 20px;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+.form {
+    background: linear-gradient(#00644b,#009871);
+    padding: 35px 20px 25px 20px;
+    box-sizing: border-box;
+    min-height: 405px;
+}
+.form h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 36px;
+}
+.inputBox {
+    margin-top: 25px;
+}
+.inputBox .tAreaBox {
+    width: 460px;
+    height: 245px;
+    border-radius: 3px;
+    float: left;
+    margin-right: 30px;
+}
+.inputBox .data {
+    display: inline-block;
+    max-width: 460px;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 24px;
+}
+.inputBox .data input {
+    width: 100%;
+    border-radius: 3px;
+    padding: 5px;
+    border: none;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    resize: horizontal;
+    color: #333333;
+    font-weight: normal;
+}
+.inputBox .data input.btn {
+    width: 70px;
+    padding: 5px;
+    float: right;
+    margin-top: 10px;
+    background-color: #00cc99;
+    color: #ffffff;
+}
+.footer {
+    background-color: #ffffff;
+    position: relative;
+    height: 120px;
+}
+.footer a.footerLogo {
+    float: left;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.footer .contact {
+    float: right;
+    margin-top: 26px;
+    margin-right: 20px;
+    line-height: 24px;
+}
+.footer .contact a {
+    color: #e12d80;
 }
