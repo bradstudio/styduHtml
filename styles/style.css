@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+}
+.nav {
+    max-width: 100%;    
+    background-color: #f6f6f6;
+}
+.nav .share {
+    float: right;    
+    width: 1000px;
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+}
+.share a {
+    position: absolute;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 15px;
+}
+.share a.fb {
+    color: #4460a0;
+    right: 120px;
+}
+.share a.twitter {
+    color: #00aaec;
+    right: 2%;
+}
