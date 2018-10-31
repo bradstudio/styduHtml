@@ -40,8 +40,8 @@
             <div class="menu">
                 <ul>
                     <li><a href="#">首頁</a></li>
-                    <li>
-                        <a href="#" class="product">產品介紹</a>
+                    <li class="product">
+                        <a href="#">產品介紹</a>
                         <ul class="subMenu">
                             <li><a href="#">Html5 基礎教學</a></li>
                             <li><a href="#">響應式網站設計</a></li>
@@ -175,10 +175,9 @@
             $('#slider').nivoSlider();
         });
         $(document).ready(function () {
-            $('.product').click(function (e) { 
-                e.preventDefault();
-                $('.subMenu').slideToggle();
-            });
+            $('.product').hover(function () {
+                $(this).find('ul').slideToggle();
+                });
         });
     </script>
 </body>
